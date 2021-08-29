@@ -1,0 +1,398 @@
+:root{
+    --body-background-color: #0c0038;
+}
+
+@font-face {
+    font-family: BalsamiqSans;
+    src: url('../fonts/BalsamiqSans-Regular.ttf');
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+::selection{
+    background-color: #fff;
+    color: #000;
+}
+
+/* style for entire body */
+body{
+    background-color: var(--body-background-color);
+    font-family: 'BalsamiqSans';
+    color: #fff;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+/* Style for navigation bar */
+
+nav{
+    color: white;
+    background-color: #000;
+}
+ul>li{
+    list-style-type: none;
+}
+
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;;
+}
+
+.logo{
+    padding: 8px;;
+}
+
+.logo img{
+    width: 200px;
+    height:55px;
+    border-radius: 50%;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation > li{
+    margin-right: 20px;
+    margin-top: 30px;
+}
+
+.navigation > li a:hover{
+    color: #81f0c9;
+    font-size: 1.2em;
+    transition: font-size 1s, color 1s;
+}
+
+.navigation > li a{
+    text-decoration: none;
+    color: white;
+}
+
+/* home page */
+
+#home{
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 5vh auto;
+    
+}
+
+
+#inner{
+    
+    width: 80%;
+    height: 80vh;
+    background-image: url('../images/introPage.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 2px 2px 2px #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    color: white;
+    margin: auto;
+
+}
+
+#inner>div p{
+    text-align: center;
+}
+
+#home>div span{
+    font-size: 0.5em;
+    text-align: right;
+}
+
+/* projects */
+#projects{
+    height: 80vh;
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+/* Team */
+
+#team{
+    padding-left: 100px;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+
+#team .member{
+    height: 200px;
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #fff;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+#team .member:hover{
+    background-color: #fff;
+    color: #000;
+    transition: background 1s, color 1.5s;
+    box-shadow: 2px 2px #000;
+}
+
+.member .profile{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+
+.desc{
+    display: flex;
+    flex-direction: column;
+}
+
+/*  Pricing */
+
+
+div#pricing{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+div#price{
+    width: 25%;
+    height: 70%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+div#price:hover{
+    border-left: 2px solid #000;
+    border-top: 2px solid #000;
+    border-right: none;
+    border-bottom: none;
+    background-color: #fff;
+    color: #000;
+    transition: border 0.2s, color 1s;
+}
+
+div#price>.button{
+    border: 1px solid #fff;
+    width: 80%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.button:hover{
+    background-color: #000;
+    color: #fff;
+    transition: background-color 1s, color 1s;
+}
+
+
+
+
+/* Blog */
+
+#blogHeading, #plansHeading, #projectsHeading{
+    font-size: 80px;
+    margin-bottom: 50px;
+}
+
+div#blog{
+    height: 60vh;
+    width: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: both mandatory;
+    scroll-snap-align: center;
+}
+
+.post{
+    width: 500px;
+    height: 160px;
+    margin-left: 150px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.post>div>a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    background-color: #fff;
+    padding: 2px;
+    margin-top: 8px;
+}
+
+/* Styles for about */
+#about{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(51, 43, 85);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#profileDescription{
+    width: 60%;
+    height: 100%;
+    margin-left: 40px;
+    transform: skewX(-20deg);
+    border-right: 5px solid #fff;
+
+}
+
+#profileDescription h1{
+    color: #fff;
+    font-size: 100px;
+    text-align: left;
+    margin-top: 50px;
+}
+
+#profilePic>img{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    right: 100px;
+    border: 2px solid black;
+}
+
+#profilePic>figcaption{
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+#profilePic>figcaption>span{
+    font-size: 0.5em;
+}
+
+
+#profileDescription > ul{
+    margin-top: 100px;
+    display: flex;
+}
+
+
+/* Styles for contact */
+
+#contact{
+    width: 100%;
+    height: 80vh;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#form > h1{
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#form>input{
+    width: 500px;
+    height:50px ;
+    margin-bottom: 20px;
+    outline: none;
+    font-size: 2em;
+    border-radius: 10%;
+    
+}
+
+#message{
+    height: 500px;
+}
+
+hr{
+    border: 2px dotted #fff;
+    width: 70%;
+    margin: auto;
+}
+
+
+#footer{
+    width: 100%;
+    height: 20vh;
+}
+
+#footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#details{
+    font-size: 0.7em;
+}
+
+#nav-list{
+    font-size: 0.7em;;
+}
+#nav-list li > a{
+    text-decoration: none;
+    color: white;
+   
+}
+
+#nav-list li > a:hover{
+    cursor: pointer;
+}
+
+#backToTop{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 570px;
+    right: 50px;
+    transform: rotate(90deg);
+    border-radius: 50%;
+    display: none;
+}
+
+#backToTop:hover{
+    background-color: rgb(152, 119, 230);
+    box-shadow: 0 0 5px 5px rgb(167, 168, 187);
+    transition: background-color 1s, display 0.5s;
+}
